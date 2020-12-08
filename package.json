@@ -1,12 +1,17 @@
 {
   "name": "wxml-minify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "miniprogram wxml minify",
   "main": "./lib/index",
-  "keywords": ["miniprogram", "wxml", "minify", "compress"],
+  "keywords": [
+    "miniprogram",
+    "wxml",
+    "minify",
+    "compress"
+  ],
   "author": "littleprincewdk <2889110370@qq.com>",
   "license": "MIT",
-    "scripts": {
+  "scripts": {
     "test": "jest",
     "lint:script": "eslint . --ext '.js' --report-unused-disable-directives",
     "lint-fix:script": "npm run lint:script -- --fix"
