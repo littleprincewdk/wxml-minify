@@ -57,6 +57,20 @@ test('minify js expression - 5', () => {
   expect(minify(fixture)).toBe(expected);
 });
 
+test('fix jsmin bug: 除以数字的表达式数字丢失 - 1', () => {
+  const fixture = `<view a="b / 4"/>`;
+  const expected = `<view a="b / 4"/>`;
+
+  expect(minify(fixture)).toBe(expected);
+});
+
+test('fix jsmin bug: 除以数字的表达式数字丢失 - 2', () => {
+  const fixture = `<view a="b / 0.4"/>`;
+  const expected = `<view a="b / 0.4"/>`;
+
+  expect(minify(fixture)).toBe(expected);
+});
+
 test('remove space between attributes - 1', () => {
   const fixture = `<view a="a" b="b" />`;
   const expected = `<view a="a"b="b"/>`;
