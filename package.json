@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "jsmin": "^1.0.1",
-    "miniprogram-posthtml-render": "^1.0.0",
+    "miniprogram-posthtml-render": "^1.0.1",
     "posthtml": "^0.15.1",
     "pretty-data": "^0.40.0"
   },
