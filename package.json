@@ -1,6 +1,6 @@
 {
   "name": "wxml-minify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "miniprogram wxml minify",
   "main": "./lib/index",
   "keywords": [
