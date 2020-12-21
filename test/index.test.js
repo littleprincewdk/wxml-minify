@@ -7,10 +7,13 @@ test('treat empty content as single tag', () => {
   expect(minify(fixture)).toBe(expected);
 });
 
-test('remove \\n between tag', () => {
-  const fixture = `<view />
-  <view />`;
-  const expected = '<view/><view/>';
+test('remove blank', () => {
+  const fixture = `<view>
+  <view>hello</view>
+  world
+</view>`;
+  const expected = `<view><view>hello</view>
+world</view>`;
 
   expect(minify(fixture)).toBe(expected);
 });
@@ -102,12 +105,16 @@ test('remove space between attributes - 4', () => {
 test('mix', () => {
   const fixture = `<view class="{{a ? 'b' : 'c'}}">
   <!-- comment -->
+
+
   <view wx:if="{{a && b}}">hello</view>
   <view wx:else">world</view>
   <image class="d" id="e" lazy-load />
 </view>
 `;
-  const expected = `<view class="{{a?'b':'c'}}"><view wx:if="{{a&&b}}">hello</view><view wx:else">world</view><image class="d"id="e" lazy-load/></view>`;
+  const expected = `<view class="{{a?'b':'c'}}"><view wx:if="{{a&&b}}">hello</view>
+<view wx:else">world</view>
+<image class="d"id="e" lazy-load/></view>`;
 
   expect(minify(fixture)).toBe(expected);
 });

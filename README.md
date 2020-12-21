@@ -19,13 +19,15 @@ minify(`
   <image class="d" id="e" lazy-load />
 </view>
 `)
-// <view class="{{a?'b':'c'}}"><view wx:if="{{a&&b}}">hello</view><view wx:else">world</view><image class="d"id="e" lazy-load/></view>
+// <view class="{{a?'b':'c'}}"><view wx:if="{{a&&b}}">hello</view>
+// <view wx:else">world</view>
+// <image class="d"id="e" lazy-load/></view>
 ```
 
 ## 原理
 
 目前通过以下途径压缩，压缩率20%以上：
-1. 去除标签间换行符
+1. 去除标签内空白符
 2. 去除注释
 3. js表达式压缩
 4. 去除属性间空格
