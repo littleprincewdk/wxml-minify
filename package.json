@@ -10,6 +10,7 @@
     "compress"
   ],
   "author": "littleprincewdk <2889110370@qq.com>",
+  "repository": "https://github.com/littleprincewdk/wxml-minify",
   "license": "MIT",
   "scripts": {
     "test": "jest",
